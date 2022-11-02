@@ -1,0 +1,64 @@
+
+
+
+<div class="container">
+  <br />
+
+
+
+  <h1 class="text-center inicioSesion ">Inicia sesion</h1>
+
+  <p class="text-center pComienza">
+    Hola! Inicia sesion  y comienza a  notariar virtualmente
+    tus documentos y muchos mas
+  </p>
+
+  <form [formGroup]="formularioLogin">
+
+    <div class="row  w-100">
+      <div class="col text-center">
+        <div class="subscribe-wrapper text-center">
+
+          <input type="text" style="top:200px;" class="subscribe-input text-center" placeholder="ingrese su usuario" formControlName="usuario">
+          <p *ngIf="formularioLogin.controls['usuario'].invalid && formularioLogin.controls['usuario'].dirty" class="text-danger" style="top:230px; position:relative; "> El campo usuario es obligatorio</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row  w-100">
+      <div class="col text-center">
+        <div class="subscribe-wrapper text-center">
+
+          <input type="text" style="top:225px;" class="subscribe-input text-center" placeholder="ingrese su contraseña" formControlName="contrasena">
+          <p *ngIf="formularioLogin.controls['contrasena'].invalid && formularioLogin.controls['contrasena'].dirty" class="text-danger" style="top:230px; position:relative"> El campo contraseña es obligatorio</p>
+          <!--<p class="text-danger" style="top:210px; position:relative"> La contraseña ó el usuaerio son incorrectas</p>-->
+        </div>
+      </div>
+    </div>
+
+  </form>
+  <div class="row  w-100 align-items-center">
+
+    <div class="col-12 text-center">
+      <button class="btnAmarillo " [disabled]="formularioLogin.valid" (click)="IniciarSesion()">iniciar  </button>
+    </div>
+  </div>
+
+
+
+  <div class="row w-100"  style="top:400px; position:relative;">
+
+    <div class="col text-center">
+      <a href="/"><p class="text-center">Olvide mi contraseña  </p></a>
+    </div>
+    <div class="col text-center">
+      <a href="/"><p class="text-center">Terminos y condiciones  </p></a>
+    </div>
+    <div class="col text-center">
+      <a href="/"><p class="text-center text-info">No tengo cuenta, crear una aqui  </p></a>
+    </div>
+
+  </div>
+
+</div>
+

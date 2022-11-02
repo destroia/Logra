@@ -1,0 +1,48 @@
+body {
+  background-color: #E5E5E5;
+  height: 100vh;
+}
+.frame {
+  background-color: #FFFFFF;
+  position: relative;
+  width: 467px;
+  height: 328px;
+  left: 225px;
+  top: 234px;
+  
+}
+.imagenicono {
+    position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50px;
+  top: 36px;
+}
+.Comenzar {
+  position: absolute;
+  color: #828282;
+  font-size: 18px;
+  text-align: center;
+  top: 27px;
+  line-height: 21px;
+  left: 100px;
+}
+.cantPersonas {
+  position: absolute;
+  color: #828282;
+  font-size: 13px;
+  text-align: center;
+  top: 47px;
+  line-height: 16px;
+  left: 115px;
+
+}
+.divisor {
+  position: absolute;
+  width: 391.02px;
+  height: 0px;
+  left: 73px;
+  top: 70px;
+}
+
+

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Logra.Views.LoginView">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="0">
+                    <magic:GradientStop Color="#63B8B8" Offset=".20"/>
+                    <magic:GradientStop Color="#345885" Offset=".70"/>
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+        <StackLayout VerticalOptions="CenterAndExpand">
+
+
+          
+
+                <!--<Image Source="login.png"  Aspect="AspectFill"></Image>-->
+
+                <StackLayout  VerticalOptions="Center" >
+
+               
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Padding="30,0" >
+                   
+                        <Frame HorizontalOptions="Center" TranslationY="180" Opacity="0.3"  CornerRadius="10"  >
+                        <StackLayout  HeightRequest="300" WidthRequest="500" ></StackLayout>
+                        </Frame>
+
+                        <Frame  Margin="50,0" BackgroundColor="#345885"  TranslationY="-250"  
+                                        HorizontalOptions="CenterAndExpand"  CornerRadius="100" >
+                            <Image Source="logo.png"  HeightRequest="100" ></Image>
+                        </Frame>
+                    
+                        <Frame BackgroundColor="White"  Opacity="1" CornerRadius="10" TranslationY="-220"  Margin="30,0"></Frame>
+                            <Entry  x:Name="codigo"   Placeholder="Ingrese su codigo" TranslationY="-265" Margin="35,0" HorizontalTextAlignment="Center" ></Entry>
+
+                        <Frame BackgroundColor="White" Opacity="1" CornerRadius="10"   TranslationY="-260" Margin="30,0"></Frame>
+                        <Entry x:Name="Contrasena" IsPassword="True" TranslationY="-305"  Placeholder="Ingrese su contraseña" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+
+                    </StackLayout>
+
+                   
+                <StackLayout TranslationY="-340">
+                    <Button  x:Name="InicioSesion"  BackgroundColor="#345885" HeightRequest="40" CornerRadius="10"
+                                        Margin="70,50,70,0"  Text="INICIAR SESIÓN" TextColor="White"  Clicked="Button_InicioSesion">
+
+                    </Button>
+                    <Button x:Name="Registro"  WidthRequest="100" BackgroundColor="#345885" HeightRequest="40" CornerRadius="10"
+                                        Margin="70,10,70,0" Text="REGISTRARSE" TextColor="White" Clicked="Button_Registro">
+                        
+                    </Button>
+                    <ActivityIndicator x:Name="ACty" HorizontalOptions="Center" TranslationY="-100" Scale="2"  ></ActivityIndicator>
+                </StackLayout>
+                
+                </StackLayout>
+
+        </StackLayout>
+    </Grid>
+
+    <!--<ContentPage.Content>-->
+        <!--<StackLayout BackgroundColor="#365C87" >-->
+      
+        <!--<BoxView CornerRadius="30" WidthRequest="50">
+                        
+                    </BoxView>-->
+            
+
+
+
+            <!--<StackLayout HorizontalOptions="CenterAndExpand" Margin="20" VerticalOptions="CenterAndExpand">
+                <Image Source="Logra.png" HorizontalOptions="CenterAndExpand" Margin="0,0,0,80" Scale="0.7"></Image>
+                <Entry  x:Name="codigo"  Placeholder="Ingrese su codigo" HorizontalTextAlignment="Center"  WidthRequest="300" Margin="0,30"></Entry>
+                <Entry x:Name="Contrasena"  Placeholder="Ingrese su contraseña" HorizontalTextAlignment="Center"></Entry>
+                <Button   WidthRequest="100" BackgroundColor="#63B8B8" HeightRequest="70" CornerRadius="50"
+                          Margin="30,50,30,0" Text="INICIAR SESIÓN" TextColor="White"  Clicked="Button_InicioSesion"></Button>
+                <Button   WidthRequest="100" BackgroundColor="#63B8B8" HeightRequest="70" CornerRadius="50"
+                          Margin="30,20,30,0" Text="REGISTRARSE" TextColor="White"  Clicked="Button_Registrarse"></Button>
+            </StackLayout>-->
+    <!--</ContentPage.Content>-->
+</ContentPage>

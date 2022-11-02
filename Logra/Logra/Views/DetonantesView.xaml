@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Logra.Views.DetonantesView" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <Grid>
+            <magic:GradientView VerticalOptions="FillAndExpand">
+                <magic:GradientView.GradientSource>
+                    <magic:LinearGradient Angle="0">
+                        <magic:GradientStop Color="#63B8B8" Offset=".20"/>
+                        <magic:GradientStop Color="#345885" Offset=".70"/>
+                    </magic:LinearGradient>
+                </magic:GradientView.GradientSource>
+            </magic:GradientView>
+
+            
+            <StackLayout  Margin="0" WidthRequest="380" >
+                    <Frame  HeightRequest="26"  BackgroundColor="#5CAAB1" WidthRequest="380"  Margin="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.80*"/>
+                                <ColumnDefinition Width="0.20*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Source="LograBlanco.png" HorizontalOptions="StartAndExpand" Scale="1.7" TranslationX="20" TranslationY="0"></Image>
+                            <Image Source="UsuarioBlanco.png" Grid.Column="1" HorizontalOptions="Center" Scale="1.3" TranslationY="3"></Image>
+                        </Grid>
+                    </Frame>
+            </StackLayout>
+
+            <ScrollView>
+
+                <StackLayout  HeightRequest="640">
+
+                    <Label TranslationY="80" Text="¿Qué causa tu emocione?"  Margin="20,0" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                    <Label TranslationY="80" Text="Puedes seleccionar un icono." Margin="20,0" TextColor="White" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+
+                    <StackLayout  TranslationY="100"  Margin="10,10" WidthRequest="345" HorizontalOptions="CenterAndExpand">
+
+                        <Grid  HorizontalOptions="Center" ColumnSpacing="10">
+                            <Grid.RowDefinitions >
+                                <RowDefinition  Height="50" />
+                                <RowDefinition  Height="40" />
+                                <RowDefinition  Height="50"/>
+                                <RowDefinition  Height="40"/>
+                                <RowDefinition  Height="50"/>
+                                <RowDefinition  Height="40"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--#region Row1 -->
+                            <Image x:Name="imgBtn1" Source="Trabajo.png" Scale="0.5"  ></Image>
+                            <Label Text="Trabajo" TextColor="White" FontSize="Small" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn1" Clicked="Button_btn1" HeightRequest="60" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10"  ></Button>
+
+
+                            <Image x:Name="imgBtn2" Source="Escuela.png" Scale="0.5" Grid.Column="1" ></Image>
+                            <Label Text="Escuela" TextColor="White" FontSize="Small" Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn2" Clicked="Button_btn2"  HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="1" ></Button>
+
+                            <Image x:Name="imgBtn3" Source="CaminoEscuela.png" Scale="0.5" Grid.Column="2" ></Image>
+                            <Label Text="Camino escuela" TextColor="White" FontSize="Small" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn3" Clicked="Button_btn3" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="2" ></Button>
+
+                            <Image x:Name="imgBtn4" Source="Pareja.png" Scale="0.5" Grid.Column="3" ></Image>
+                            <Label Text="Pareja" TextColor="White" FontSize="Small" Grid.Column="3" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn4" Clicked="Button_btn4" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="3" ></Button>
+
+                            <Image x:Name="imgBtn5" Source="Soledad.png" Scale="0.5" Grid.Column="4" ></Image>
+                            <Label Text="Soledad" TextColor="White" FontSize="Small" Grid.Column="4" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn5" Clicked="Button_btn5" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="4" ></Button>
+
+                            <!--#endregion-->
+                            <!--#region Row2 -->
+                            <Image x:Name="imgBtn6" Source="Familia.png" Scale="0.5" Grid.Row="2" ></Image>
+                            <Label Text="Familia" TextColor="White" FontSize="Small" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn6" Clicked="Button_btn6" HeightRequest="60" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Row="2"></Button>
+
+                            <Image x:Name="imgBtn7" Source="Amigo.png" Scale="0.5" Grid.Column="1" Grid.Row="2" ></Image>
+                            <Label  Text="Amigos" TextColor="White" FontSize="Small" Grid.Column="1" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn7" Clicked="Button_btn7" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="1" Grid.Row="2" ></Button>
+
+                            <Image x:Name="imgBtn8" Source="RedSocial.png" Scale="0.5" Grid.Column="2"  Grid.Row="2"></Image>
+                            <Label Text="Redes sociales" TextColor="White" FontSize="Small" Grid.Column="2" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn8" Clicked="Button_btn8" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="2" Grid.Row="2" ></Button>
+
+                            <Image x:Name="imgBtn9" Source="Dormi.png" Scale="0.5" Grid.Column="3" Grid.Row="2" ></Image>
+                            <Label Text="Dormi bien" TextColor="White" FontSize="Small" Grid.Column="3" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn9" Clicked="Button_btn9" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="3" Grid.Row="2"></Button>
+
+                            <Image x:Name="imgBtn10" Source="NoDormi.png" Scale="0.5" Grid.Column="4"  Grid.Row="2"></Image>
+                            <Label Text="Dormi mal" TextColor="White" FontSize="Small" Grid.Column="4" Grid.Row="3" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn10" Clicked="Button_btn10" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="4" Grid.Row="2" ></Button>
+
+                            <!--#endregion-->
+                            <!--#region Row3 -->
+                            <Image x:Name="imgBtn11" Source="Sedentario.png" Scale="0.5" Grid.Row="4" ></Image>
+                            <Label Text="Sedentario" TextColor="White" FontSize="Small" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn11" Clicked="Button_btn11" HeightRequest="60" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Row="4"></Button>
+
+                            <Image x:Name="imgBtn12" Source="Ejercicio.png" Scale="0.5" Grid.Column="1" Grid.Row="4" ></Image>
+                            <Label Text="Ejercicio" TextColor="White" FontSize="Small" Grid.Column="1" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn12" Clicked="Button_btn12" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="1" Grid.Row="4" ></Button>
+
+                            <Image x:Name="imgBtn13" Source="Cuerpo.png" Scale="0.5" Grid.Column="2"  Grid.Row="4"></Image>
+                            <Label Text="Mi cuerpo" TextColor="White" FontSize="Small" Grid.Column="2" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn13" Clicked="Button_btn13" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="2" Grid.Row="4" ></Button>
+
+                            <Image x:Name="imgBtn14" Source="Salud.png" Scale="0.5" Grid.Column="3" Grid.Row="4" ></Image>
+                            <Label Text="Salud" TextColor="White" FontSize="Small" Grid.Column="3" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn14" Clicked="Button_btn14" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="3" Grid.Row="4"></Button>
+
+                            <Image x:Name="imgBtn15" Source="Sexo.png" Scale="0.5" Grid.Column="4"  Grid.Row="4"></Image>
+                            <Label Text="Sexo" TextColor="White" FontSize="Small" Grid.Column="4" Grid.Row="5" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn15" Clicked="Button_btn15" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="4" Grid.Row="4" ></Button>
+
+                            <!--#endregion-->
+
+
+
+                        </Grid>
+
+                    </StackLayout>
+                    <StackLayout  Margin="10,10" WidthRequest="345"  TranslationY="80"  HorizontalOptions="CenterAndExpand">
+                        <Grid HorizontalOptions="Center" ColumnSpacing="10">
+                            <Grid.RowDefinitions >
+                                <RowDefinition  Height="50" />
+                                <RowDefinition  Height="34" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions >
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                                <ColumnDefinition  Width="55"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image x:Name="imgBtn16" Source="Aseo.png" Scale="0.5"  ></Image>
+                            <Label Text="Aseo" TextColor="White" FontSize="Small" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn16" Clicked="Button_btn16"  HeightRequest="60" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" ></Button>
+
+                            <Image x:Name="imgBtn17" Source="Clima.png" Scale="0.5" Grid.Column="1" ></Image>
+                            <Label Text="Clima" TextColor="White" FontSize="Small" Grid.Column="1" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn17" Clicked="Button_btn17" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="1" ></Button>
+
+                            <Image x:Name="imgBtn18" Source="Aire.png" Scale="0.5" Grid.Column="2" ></Image>
+                            <Label Text="El aire" TextColor="White" FontSize="Small" Grid.Column="2" Grid.Row="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Start"></Label>
+                            <Button x:Name="btn18" Clicked="Button_btn18" HeightRequest="80" BackgroundColor="Transparent" BorderColor="White" BorderWidth="2" CornerRadius="10" Grid.Column="2" ></Button>
+
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout Margin="30,45,30,30">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                            </Grid.RowDefinitions>
+                            <Button x:Name="Continuar"  BackgroundColor="Transparent" TextColor="White"   FontSize="Medium"  Text="Continuar" Clicked="Button_Continuar"></Button>
+                        </Grid>
+                    </StackLayout>
+                    <ActivityIndicator x:Name="Acty" Scale="2" TranslationY="-300" ></ActivityIndicator>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+        
+       
+
+      
+        
+          
+
+        
+    </ContentPage.Content>
+</ContentPage>

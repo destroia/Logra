@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Logra.Views.EmocionView" NavigationPage.HasNavigationBar="False" >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White"  >
+            <StackLayout>
+                <Frame  HeightRequest="26" Margin="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.80*"/>
+                            <ColumnDefinition Width="0.20*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="LograVerde.png" HorizontalOptions="StartAndExpand" Scale="1.7" TranslationX="20" TranslationY="0"></Image>
+                        <Image Source="Usuario.png" Grid.Column="1" HorizontalOptions="Center" Scale="1.3" TranslationY="3"></Image>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+           
+                <StackLayout x:Name="Emociones"  HeightRequest="600"  Margin="20,0,20,0"   HorizontalOptions="CenterAndExpand"
+                         >
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="70"/>
+                    </Grid.RowDefinitions>
+                   
+                    <Image x:Name="imgFeliz" Source="Feliz.png" Scale="0.8" ></Image>
+                    <Button BackgroundColor="Transparent" Clicked="Button_EmoFeliz"  ></Button>
+                    
+                    <Image x:Name="imgMalHumor" Source="MalHumor.png" Grid.Column="1" Scale="0.8"></Image>
+                    <Button  Grid.Column="1" BackgroundColor="Transparent" Clicked="Button_MalHumor"  ></Button>
+                    
+                    <Image x:Name="imgTristeza" Source="Tristeza.png" Grid.Column="2" Scale="0.8"></Image>
+                    <Button Grid.Column="2" BackgroundColor="Transparent" Clicked="Button_Triesteza"  ></Button>
+                    
+                    <Image x:Name="imgEstres" Source="Estres.png" Grid.Column="3"  Scale="0.8"></Image>
+                    <Button Grid.Column="3" BackgroundColor="Transparent" Clicked="Button_Estres"  ></Button>
+                    
+                    <Image x:Name="imgMatoneo" Source="Matoneo.png" Grid.Column="4" Scale="0.8"></Image>
+                    <Button Grid.Column="4" BackgroundColor="Transparent" Clicked="Button_Matoneo"  ></Button>
+                </Grid>
+                
+                <ScrollView>
+                    <StackLayout Margin="8,0,8,8" >
+                       
+                        <Frame x:Name="FraPalabras"  HeightRequest="390" CornerRadius="10" >
+
+                           
+                            <Grid Margin="0,20,0,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Button x:Name="btn1" Grid.Column="0" Grid.Row="0" TextColor="White" Clicked="btn1_Clicked"></Button>
+                                <Button x:Name="btn2" Grid.Column="1" Grid.Row="0" TextColor="White" Clicked="btn2_Clicked"></Button>
+                                                                                                     
+                                <Button x:Name="btn3" Grid.Column="0" Grid.Row="1" TextColor="White" Clicked="btn3_Clicked"></Button>
+                                <Button x:Name="btn4" Grid.Column="1" Grid.Row="1" TextColor="White" Clicked="btn4_Clicked"></Button>
+                                                                                                     
+                                <Button x:Name="btn5" Grid.Column="0" Grid.Row="2" TextColor="White" Clicked="btn5_Clicked"></Button>
+                                <Button x:Name="btn6" Grid.Column="1" Grid.Row="2" TextColor="White" Clicked="btn6_Clicked"></Button>
+                                                                                                     
+                                <Button x:Name="btn7" Grid.Column="0" Grid.Row="3" TextColor="White" Clicked="btn7_Clicked"></Button>
+                                <Button x:Name="btn8" Grid.Column="1" Grid.Row="3" TextColor="White" Clicked="btn8_Clicked"></Button>
+                                                                                                     
+                                <Button x:Name="btn9" Grid.Column="0" Grid.Row="4"  TextColor="White " Clicked="btn9_Clicked"></Button>
+                                <Button x:Name="btn10" Grid.Column="1" Grid.Row="4" TextColor="White " Clicked="btn10_Clicked"></Button>
+                                                                                                      
+                                <Button x:Name="btn11" Grid.Column="0" Grid.Row="5" TextColor="White " Clicked="btn11_Clicked"></Button>
+                                <Button x:Name="btn12" Grid.Column="1" Grid.Row="5" TextColor="White " Clicked="btn12_Clicked" ></Button>
+                                                                                                     
+                                <Button x:Name="btn13" Grid.Column="0" Grid.Row="6" TextColor="White " Clicked="btn13_Clicked"></Button>
+                                <Button x:Name="btn14" Grid.Column="1" Grid.Row="6" TextColor="White " Clicked="btn14_Clicked"></Button>
+                                                                                                     
+                                <Button x:Name="btn15" Grid.Column="0" Grid.Row="7" TextColor="White " Clicked="btn15_Clicked"></Button>
+                                <Button x:Name="btn16" Grid.Column="1" Grid.Row="7" TextColor="White " Clicked="btn16_Clicked"></Button>
+                            </Grid>
+                        </Frame>
+                        <Label x:Name="CategoriaWord" TranslationY="-533" FontSize="Medium" HorizontalOptions="Center"  TextColor="White"></Label>
+                    </StackLayout>
+                </ScrollView>
+                <ActivityIndicator x:Name="Acty"  TranslationY="-200"   IsRunning="true" Scale="2" HorizontalOptions="Center" ></ActivityIndicator>
+            </StackLayout>
+           
+        </StackLayout>
+        
+            
+            
+            
+        
+    </ContentPage.Content>
+</ContentPage>

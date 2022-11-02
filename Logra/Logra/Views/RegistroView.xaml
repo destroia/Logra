@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             mc:Ignorable="d"
+             x:Class="Logra.Views.RegistroView">
+    <Grid>
+        <magic:GradientView VerticalOptions="FillAndExpand">
+            <magic:GradientView.GradientSource>
+                <magic:LinearGradient Angle="0">
+                    <magic:GradientStop Color="#63B8B8" Offset=".20"/>
+                    <magic:GradientStop Color="#345885" Offset=".70"/>
+                </magic:LinearGradient>
+            </magic:GradientView.GradientSource>
+        </magic:GradientView>
+
+        <StackLayout  VerticalOptions="CenterAndExpand">
+
+
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" Padding="30,0" >
+
+
+                <Frame HorizontalOptions="Center" Opacity="0.3" TranslationY="180" CornerRadius="10"   >
+                    <StackLayout HeightRequest="380" WidthRequest="500" ></StackLayout>
+                </Frame>
+                <Frame BackgroundColor="White" TranslationY="-200" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                <Entry  x:Name="codigo"  TranslationY="-245"  Placeholder="Ingrese su codigo" Margin="35,0" HorizontalTextAlignment="Center" ></Entry>
+
+                <Frame BackgroundColor="White" TranslationY="-245" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                <Entry x:Name="Usuario"  TranslationY="-290"  Placeholder="Ingrese su usuario" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                <Frame BackgroundColor="White" TranslationY="-290" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                <Entry x:Name="Email"  TranslationY="-335"  Placeholder="Ingrese su e-mail" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                <Frame BackgroundColor="White" TranslationY="-335" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                <Entry x:Name="Contrasena"  IsPassword="True" TranslationY="-380"  Placeholder="Ingrese su contraseña" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                <Frame BackgroundColor="White" TranslationY="-380" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                <Entry x:Name="ConfirmaContrasena" IsPassword="True" TranslationY="-425"  Placeholder="Confirma tu contraseña" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+            </StackLayout>
+
+            <Frame  Margin="50,0" BackgroundColor="#345885"   HorizontalOptions="CenterAndExpand"  CornerRadius="100" 
+                                    TranslationY="-850">
+                <Image Source="logo.png" WidthRequest="100" HeightRequest="100" ></Image>
+            </Frame>
+
+            <ActivityIndicator x:Name="ACty" HorizontalOptions="Center" TranslationY="-700"  Scale="2" ></ActivityIndicator>
+        </StackLayout>
+
+        <StackLayout TranslationY="480" >
+            <Grid Margin="40.0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Guardar"   BackgroundColor="#345885" CornerRadius="10"  
+                                         Text="Guardar" TextColor="White" 
+                                       Clicked="Button_Guardar" >
+
+                </Button>
+                <Button x:Name="BtnCancelar" Grid.Column="1" TranslationY="0"  BackgroundColor="#345885"  CornerRadius="10"
+                                       Text="Cancelar" TextColor="White" Clicked="Button_Cancelar" >
+
+                </Button>
+
+            </Grid>
+
+        </StackLayout>
+    </Grid>
+    
+    <!--<ContentPage.Content>
+        <StackLayout BackgroundColor="#345885">
+            
+            <AbsoluteLayout>
+
+                <Image Source="login.png"  Aspect="AspectFill"></Image>
+
+                <StackLayout  >
+
+
+
+                    <StackLayout TranslationY="150" HorizontalOptions="CenterAndExpand" Padding="30,0" WidthRequest="300"  >
+                        
+
+                        <Frame HorizontalOptions="Center" Opacity="0.3"  CornerRadius="10" HeightRequest="350" WidthRequest="500"   >
+
+                        </Frame>
+                        <Frame BackgroundColor="White" TranslationY="-280" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                        <Entry  x:Name="codigo"  TranslationY="-325"  Placeholder="Ingrese su codigo" Margin="35,0" HorizontalTextAlignment="Center" ></Entry>
+
+                        <Frame BackgroundColor="White" TranslationY="-325" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                        <Entry x:Name="Usuario"  TranslationY="-370"  Placeholder="Ingrese su usuario" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                        <Frame BackgroundColor="White" TranslationY="-370" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                        <Entry x:Name="Email"  TranslationY="-415"  Placeholder="Ingrese su e-mail" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                        <Frame BackgroundColor="White" TranslationY="-415" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                        <Entry x:Name="Contrasena"  TranslationY="-460"  Placeholder="Ingrese su contraseña" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                        <Frame BackgroundColor="White" TranslationY="-460" Opacity="1" CornerRadius="10"  Margin="30,0"></Frame>
+                        <Entry x:Name="ConfirmaContrasena"  TranslationY="-505"  Placeholder="Confirma tu contraseña" Margin="35,0" HorizontalTextAlignment="Center"></Entry>
+
+                    </StackLayout>
+
+                    <Frame  Margin="50,0" BackgroundColor="#345885"  WidthRequest="100" HeightRequest="100"
+                                    HorizontalOptions="Center" CornerRadius="100" TranslationY="-790">
+                        <Image Source="logo.png"  ></Image>
+                    </Frame>
+
+                    <ActivityIndicator x:Name="ACty" HorizontalOptions="Center" TranslationY="-700" Scale="2" ></ActivityIndicator>
+                </StackLayout>
+                
+                <StackLayout TranslationY="500" Margin="30.0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="Guardar"   BackgroundColor="#345885" CornerRadius="10"  
+                                         Text="Guardar" TextColor="White" 
+                                       Clicked="Button_Guardar" Margin="0,0">
+
+                        </Button>
+                        <Button x:Name="BtnCancelar" Grid.Column="1" TranslationY="0"  BackgroundColor="#345885"  CornerRadius="10"
+                                       Text="Cancelar" TextColor="White" Clicked="Button_Cancelar" >
+
+                        </Button>
+
+                    </Grid>
+
+                </StackLayout>
+            </AbsoluteLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>-->
+</ContentPage>

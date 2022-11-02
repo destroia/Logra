@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage  xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Logra.Views.PoupView">
+
+
+    <Frame  Margin="20" WidthRequest="300" HeightRequest="200" BackgroundColor="#FFFFFF" CornerRadius="20" 
+            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <StackLayout >
+            <Label x:Name="textoInfo" TextColor="#63B8B8"
+                VerticalOptions="CenterAndExpand" FontSize="Large"
+                HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"/>
+
+            <Button Clicked="Button_Clicked" BackgroundColor="#63B8B8" TextColor="#FFFFFF" CornerRadius="30"
+                    VerticalOptions="End" HorizontalOptions="Center" Text="OK" WidthRequest="100"></Button>
+        </StackLayout>
+    </Frame>
+       
+      
+   
+</popup:PopupPage>

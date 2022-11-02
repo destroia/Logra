@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:Radio="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+            mc:Ignorable="d"
+             x:Class="Logra.Views.TabbedView">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Inicio" >
+        <StackLayout>
+            <WebView Source="https://logramas.co/category/maltratos/" HeightRequest="3000" />
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Juego" >
+        <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label FontSize="Medium" Margin="30" TextColor="#63B8B8" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalOptions="Center"
+                   Text="Aun no está disponible el juego en esta versión "></Label>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Test" >
+        <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" >
+            <Label x:Name="Pregunta" HorizontalTextAlignment="Center" HorizontalOptions="Center" Margin="30,40" TextColor="#63B8B8" FontSize="25"></Label>
+            
+            <StackLayout x:Name="IsSlider"  HorizontalOptions="Center" Margin="20,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Image  Source="Feliz.png" Grid.Column="0" ></Image>
+                    <Image Source="MalHumor.png"  Grid.Column="1" ></Image>
+                    <Image Source="Tristeza.png" Grid.Column="2" ></Image>
+                    <Image Source="Estres.png" Grid.Column="3" ></Image>
+                    <Image Source="Matoneo.png" Grid.Column="4" ></Image>
+                    <!--<Label Text="5" FontSize="Large" HorizontalTextAlignment="Center" Grid.Column="4" FontAttributes="Bold" TextColor="Black"></Label>-->
+                </Grid>
+                <Slider x:Name="Slider" Minimum="0" Maximum="1"  ValueChanged="Slider_ValueChanged" ThumbColor="Aqua"  MaximumTrackColor="Black" MinimumTrackColor="Black" WidthRequest="300"/>
+                <Label x:Name="strValor" HorizontalOptions="Center" FontSize="Medium" TextColor="Black" Margin="0,10"></Label>
+            </StackLayout>
+            <ActivityIndicator x:Name="Acty" IsRunning="True" Scale="2 "></ActivityIndicator>
+            <StackLayout x:Name="IsRadioBtn" HeightRequest="80" TranslationY="-100"  HorizontalOptions="Center" Margin="20,0">
+
+                <Radio:BindableRadioGroup x:Name="RadioGroup"> 
+                    
+                </Radio:BindableRadioGroup>
+            </StackLayout>
+
+            <StackLayout WidthRequest="250" Margin="20" TranslationY="-100">
+                <Button x:Name="Btn" BackgroundColor="#63B8B8" Text="Siguente" WidthRequest="200"  CornerRadius="25" HorizontalOptions="Center" Clicked="Button_Clicked"> 
+                    </Button>
+
+                <Button x:Name="BtnEnviar" BackgroundColor="#63B8B8" Text="Enviar" WidthRequest="200"  CornerRadius="25" HorizontalOptions="Center" Clicked="BtnEnviar_Clicked" >
+                </Button>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
